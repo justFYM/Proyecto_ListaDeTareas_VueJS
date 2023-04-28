@@ -29,3 +29,4 @@ Debido a que se generaron los archivos estáticos del proyecto, es posible visua
   <img src="./IMG/BorrarTarea.PNG" alt="Descripción de la imagen">
 </p>
 
+#### Además, existen dos casos de uso adicionales en la aplicación, los cuales son "Ocultar terminadas" y "Mostrar terminadas". Estas funciones se encargan de permitir al usuario visualizar solamente las tareas que fueron completadas o de ocultarlas en caso de que se quiera detallar en las tareas que aún no se han finalizado.
