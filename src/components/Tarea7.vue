@@ -1,6 +1,12 @@
 <script setup>
 import { useCounterStore } from '../stores/counter';
 const useCounter = useCounterStore();
+var mensaje = {
+  dismissSecs: 4,
+  dismissCountDown: 0,
+  mensaje: {color: '', texto: 'HOLA'}
+};
+var showAlert = true;
 function terminada(){
     useCounter.tasks.forEach(element => {
         if(element.status.localeCompare('¡TERMINADA!')==0){
@@ -11,16 +17,26 @@ function terminada(){
 function mostrarTerminadas(){
     useCounter.tasks.forEach(element => {
         if(element.status.localeCompare('¡TERMINADA!')==0){
-        element.estado=true
+        element.estado=true;
+        mensaje.mensaje.texto="HOLA!";
         }
     });
 }
 
 
 
+
 </script>
 <template>
   <h2 class="text-center mt-5">Lista de tareas</h2>
+  <b-alert class="text-center" v-model="useCounter.statusNotification" dismissible v-bind:variant="`${useCounter.color}`">
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+</svg>
+    {{ `${useCounter.mensaje}` }}
+  </b-alert>
+
       <div class="d-flex mt-5">
       <b-form-input v-model="useCounter.task" placeholder="Ingrese tarea"></b-form-input>
       <b-button variant="warning" style="color: white;" @click="useCounter.submitTask()" id="probando">
@@ -84,6 +100,8 @@ function mostrarTerminadas(){
   </b-table-simple>
 
 </template>
+
+
 
 <style scoped>
 .seleccionar {

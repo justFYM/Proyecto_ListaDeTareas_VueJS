@@ -7,7 +7,10 @@ export const useCounterStore = defineStore({
     status_act: ["¡PRIORIDAD!", "EN PROCESO", "¡TERMINADA!"],
     estado: true,
     editedTask: null,
+    mensaje:'',
+    color:'',
     task: "",
+    statusNotification:false,
     tasks: [
       {
         name: "Tarea 1",
@@ -34,7 +37,7 @@ export const useCounterStore = defineStore({
      * Función que recibe un str de parámetro y vuelve a mayúscula la primera letra.
      */
     capitalizeFirstChar(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1); // stre.slice(1) elimina la primera letra (se repite)
+      return str.charAt(0).toUpperCase() + str.slice(1); // stre.slice(1) elimina la primera letra (se repite).
     },
     /**
      * Cambia el estado de la tarea
@@ -48,13 +51,16 @@ export const useCounterStore = defineStore({
     
     },
     /**
-     * Borra la tarea según el índice que reciba la función
+     * Borra la tarea según el índice que reciba la función.
      */
     deleteTask(index) {
+      this.mensaje=`¡${this.tasks[index].name} borrada!`;
+      this.color='danger';
+      this.statusNotification=true;
       this.tasks[index].estado="";
       this.tasks[index].name="";
       this.tasks[index].status="";
-    
+      
 
 
     },
@@ -67,13 +73,20 @@ export const useCounterStore = defineStore({
 
     },
     /**
-     * Agregar / Editar
+     * Agregar / Editar.
      */
     submitTask() {
-      if (this.task.length === 0) return; //Cuando no hay tareas, solo retorna
+      if (this.task.length === 0) return; //Cuando no hay tareas, solo retorna.
       /* Editar tarea */
       if (this.editedTask != null) {
+        this.mensaje=`¡${this.tasks[this.editedTask].name} modificada a ${this.task}!`;
+        this.color='warning';
+        this.statusNotification=true;
         this.tasks[this.editedTask].name = this.task; //tasks recibe el indice de la tarea que se quiere editar, y el nombre se iguala al nombre que se escriba en la caja de texto.
+      
+        
+       
+        
         this.editedTask = null; //Se setea en null para que en caso de que se quiera agregar una nueva tarea, se haga.
       } else {
         /* Agregar tarea */
@@ -82,8 +95,16 @@ export const useCounterStore = defineStore({
           status: "¡PRIORIDAD!",
           estado: true,
         });
-      }
+
+      this.mensaje=`¡${this.task} agregada!`;
+      this.color='success';
       this.task = "";
+      this.statusNotification=true;
+
+      }
+      
+      
+
     }
   }
 });

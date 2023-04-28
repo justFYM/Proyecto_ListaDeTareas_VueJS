@@ -1,29 +1,3 @@
-# tarea7
+# Proyecto: ```Lista de tareas```
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Este proyecto, que fue parte de la asignatura Desarrollo de aplicaciones para internet, tiene como objetivo permitir que los usuarios de la aplicación gestionen sus tareas. Una de las características que hace que este proyecto sea potente es el uso de la biblioteca Pinia. Pinia es una biblioteca de gestión de estado para aplicaciones Vue.js que ofrece una forma más sencilla y flexible de manejar el estado de la aplicación. A pesar de que el proyecto en sí es sencillo, Pinia lo potencia y hace que el código sea más fácil de leer y mantener, lo que ayuda a mejorar la productividad y a mantener un código más limpio y escalable.
