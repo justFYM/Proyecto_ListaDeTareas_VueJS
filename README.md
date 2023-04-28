@@ -1,7 +1,6 @@
 # Proyecto: ```Lista de tareas```
 
-Este proyecto, que fue parte de la asignatura Desarrollo de aplicaciones para internet, tiene como objetivo permitir que los usuarios de la aplicación gestionen sus tareas. Una de las características que hace que este proyecto sea potente es el uso de la biblioteca Pinia. Pinia es una biblioteca de gestión de estado para aplicaciones Vue.js que ofrece una forma más sencilla y flexible de manejar el estado de la aplicación. A pesar de que el proyecto en sí es sencillo, Pinia lo potencia y hace que el código sea más fácil de leer y mantener, lo que ayuda a mejorar la productividad y a mantener un código más limpio y escalable.  
-
+Este proyecto, que fue parte de la asignatura Desarrollo de aplicaciones para internet, tiene como objetivo permitir que los usuarios de la aplicación gestionen sus tareas. Una de las características que hace que este proyecto sea potente es el uso de la biblioteca Pinia. Pinia es una biblioteca de gestión de estado para aplicaciones Vue.js que ofrece una forma más sencilla y flexible de manejar el estado de la aplicación. A pesar de que el proyecto en sí es sencillo, Pinia lo potencia y hace que el código sea más fácil de leer y mantener, lo que ayuda a mejorar la productividad y a mantener un código más limpio y escalable.  Debido a que se generaron los archivos estáticos del proyecto, es posible visualizar el sitio web en ejecución a través de la siguiente URL: https://justfym.github.io/Proyecto_ListaDeTareas_VueJS/
 ### Stack de tecnologías.
 <p align="center">
   <img src="./IMG/StackTec.PNG" alt="Descripción de la imagen">
