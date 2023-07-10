@@ -1,6 +1,6 @@
 # Proyecto: ```Lista de tareas```
 
-El siguiente proyecto fue diseñado y creado como parte de la asignatura Desarrollo de aplicaciones para internet. Su intención es permitir que los usuarios de la aplicación gestionen sus tareas. Debido a que se generaron los archivos estáticos del proyecto, es posible visualizar el sitio web en ejecución a través de la siguiente URL: https://justfym.github.io/Proyecto_ListaDeTareas_VueJS/
+El siguiente proyecto fue diseñado y creado durante la cursada de la asignatura ```Desarrollo de aplicaciones para internet``` en la Universidad de La Frontera. La intención del proyecto es permitir que los usuarios de la aplicación gestionen sus tareas. Debido a que se generaron los archivos estáticos del proyecto, es posible visualizar el sitio web en ejecución a través de la siguiente URL: https://justfym.github.io/Proyecto_ListaDeTareas_VueJS/
 ### Stack de tecnologías.
 <p align="center">
   <img src="./IMG/StackTec.PNG" alt="Descripción de la imagen">
